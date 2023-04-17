@@ -1,47 +1,25 @@
-<<<<<<< HEAD
 from flask import Flask, request, jsonify
-=======
-from flask import Flask, request, jsonify, make_response
->>>>>>> 5636bd5032100a8e5be224d4e13e38f47ae58996
 import sqlite3
 from werkzeug.security import generate_password_hash, check_password_hash
 import uuid
 import jwt
 import datetime
 from functools import wraps
-<<<<<<< HEAD
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Ktr9xIBj1ZP-S8GM3mYKdSToiT2tZPOevIh2wX_YVd8'
-=======
-from flask import current_app
-
-
-app = Flask(__name__)
-
-app.config['SECRET_KEY'] = '7T-jO92iJRH2DWe6OceHaJXl7sNFUfVnMqukvmJN6tU'
-
->>>>>>> 5636bd5032100a8e5be224d4e13e38f47ae58996
 
 # Mapping function for sqlite3 to return rows as dictionary
 def dict_factory(cursor, row):
     fields = [column[0] for column in cursor.description]
     return {key: value for key, value in zip(fields, row)}
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 5636bd5032100a8e5be224d4e13e38f47ae58996
 # Creates connection to DB
 def get_db_connection():
     con = sqlite3.connect('database.db')
     con.row_factory = dict_factory
     return con
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 5636bd5032100a8e5be224d4e13e38f47ae58996
 # function to insert data into users table
 def insert_user(username, password):
     con = get_db_connection()
@@ -53,7 +31,6 @@ def insert_user(username, password):
     cur.close()
     con.close()
 
-<<<<<<< HEAD
 # Selects a row by matching the username
 def select_by_username(username, cur):
     print(f"Selecting user with username: {username}")
@@ -75,51 +52,11 @@ def token_required(f):
             data = jwt.decode(token, app.config['SECRET_KEY'], algorithms=["HS256"])
             username = data['username']
             #password = data['password']
-=======
-
-# Selects a row by matching the username
-def select_by_username(username, cur):
-    data = cur.execute("SELECT * FROM users WHERE username=?", (username,)).fetchone()
-    return data
-
-
-def token_generated(func):
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        data = request.get_json()
-        username = data["username"]
-        hashed_password = generate_password_hash(data['password'], method='sha256')
-        insert_user(username, hashed_password)
-
-        token = jwt.encode({'username': username, 'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=30)}, current_app.config['SECRET_KEY'], algorithm="HS256")
-        return jsonify({'token': token})
-
-    return wrapper
-
-def token_required(f):
-    @wraps(f)
-    def decorator(*args, **kwargs):
-
-        token = None
-
-        if 'x-access-tokens' in request.headers:
-            token = request.headers['x-access-tokens']
-
-        if not token:
-            return jsonify({'message': 'a valid token is missing'})
-
-        try:
-            data = jwt.decode(token, app.config['SECRET_KEY'], algorithms=["HS256"])
-            username = request.json["username"]
-            password = request.json["password"]
-
->>>>>>> 5636bd5032100a8e5be224d4e13e38f47ae58996
             con = get_db_connection()
             current_user = select_by_username(username, con.cursor())
             con.close()
         except:
             return jsonify({'message': 'token is invalid'})
-<<<<<<< HEAD
         return f(current_user, *args, **kwargs)
     return decorator
 
@@ -182,40 +119,3 @@ def get_user(current_user):
 # Start flask app automatically when run with python
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5001)
-=======
-
-        return f(current_user, *args, **kwargs)
-
-    return decorator
-
-
-@app.route('/register', methods=['POST'])
-@token_generated
-def signup_user():
-    data = request.get_json()
-    username = data['username']
-    hashed_password = generate_password_hash(data['password'], method='sha256')
-    insert_user(username, hashed_password)
-    token = jwt.encode({'username': username, 'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=30)}, app.config['SECRET_KEY'], algorithm="HS256")
-    return jsonify({'message': 'registration successful', 'token': token})
-
-@app.route('/login', methods=['POST'])
-@token_generated
-def login():
-    auth = request.authorization
-
-    if auth and auth.password == 'password':
-        token = jwt.encode({'username': auth.username, 'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=30)}, app.config['SECRET_KEY'], algorithm="HS256")
-        return jsonify({'token': token})
-
-    return jsonify({'message': 'Invalid username or password!'}), 401
-
-@app.route('/user', methods=['GET'])
-@token_required
-def protected():
-    return jsonify({'message': 'This is a protected endpoint!'})
-
-
-if  __name__ == '__main__':  
-     app.run(debug=True)
->>>>>>> 5636bd5032100a8e5be224d4e13e38f47ae58996
