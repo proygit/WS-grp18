@@ -6,3 +6,5 @@ The below method calls are done using the URL as mentioned from a WINDOWS termin
 2.trylogin : checks login in details,if successful-> returns the token for getUserdetails
 
 3.getuserdetails : it needs the token of login to show the welcome message
+
+4.References to site : https://www.bacancytechnology.com/blog/flask-jwt-authentication
