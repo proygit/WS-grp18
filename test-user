@@ -1,0 +1,80 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "USER",
+    "dateExported": "2023-04-17T16:15:47.307Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "0d87fd72-d7a8-445e-acfd-a93add75e0ea",
+            "colId": "59a45526-7c65-4937-8031-2e0388af2b82",
+            "containerId": "",
+            "name": "POST-login",
+            "url": "http://127.0.0.1:5001/trylogin",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-04-17T16:15:08.982Z",
+            "modified": "2023-04-17T16:15:08.982Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"username\":\"priyanka\",\n  \"password\":\"pass\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "416a8cfb-ffcd-418d-951f-fae6879246ec",
+            "colId": "59a45526-7c65-4937-8031-2e0388af2b82",
+            "containerId": "",
+            "name": "GET-userdetails",
+            "url": "http://127.0.0.1:5001/getdetails",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-04-17T16:15:17.811Z",
+            "modified": "2023-04-17T16:15:17.811Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                },
+                {
+                    "name": "x-access-tokens",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByaXlhbmthIiwicGFzc3dvcmQiOiJwYXNzIiwiZXhwIjoxNjgxNzQ5NzkxfQ.8qqvDqKPVVFQRR6-j-_xGuBT-TvWOMR7sXDX87W-pa4"
+                }
+            ],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QxIiwicGFzc3dvcmQiOiJwYXNzIiwiZXhwIjoxNjgxNzQ3OTI4fQ.e7AjC53KzhGE2dbPaqYt6E9fMj6gxep9TkWSDanraps"
+            },
+            "tests": []
+        },
+        {
+            "_id": "2c02ccaa-71c4-428c-9b49-c63429b49b82",
+            "colId": "59a45526-7c65-4937-8031-2e0388af2b82",
+            "containerId": "",
+            "name": "POST-newUser",
+            "url": "http://127.0.0.1:5001/newuser",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-04-17T16:15:25.892Z",
+            "modified": "2023-04-17T16:15:25.892Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"username\":\"priyanka\",\n  \"password\":\"pass\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
