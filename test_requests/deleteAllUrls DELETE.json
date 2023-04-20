@@ -1,0 +1,23 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Demo - /deleteAllUrls DELETE",
+    "dateExported": "2023-04-13T07:30:44.615Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "891a083e-42e6-403c-8063-9ebe534385c5",
+            "colId": "6a8ed2e0-3d2e-44de-8ba0-a8067181ba11",
+            "containerId": "",
+            "name": "/ DELETE",
+            "url": "http://127.0.0.1:5000/deleteAllUrls",
+            "method": "DELETE",
+            "sortNum": 10000,
+            "created": "2023-04-11T22:27:25.030Z",
+            "modified": "2023-04-11T22:27:50.149Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Demo - / GET",
+    "dateExported": "2023-04-13T07:30:37.255Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "55125fe0-9cd1-46dc-95d9-1aeba9d84fea",
+            "colId": "a72a4bb3-08cc-4ba4-8ab7-fe16d1482ce4",
+            "containerId": "",
+            "name": "/ GET",
+            "url": "http://127.0.0.1:5000",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-04-11T22:24:17.793Z",
+            "modified": "2023-04-11T22:24:40.246Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

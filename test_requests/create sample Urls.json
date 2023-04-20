@@ -1,0 +1,67 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Demo - create URLs",
+    "dateExported": "2023-04-13T07:32:28.725Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "aa931286-518f-4409-ab0f-6cc03b178624",
+            "colId": "1e93a912-0b1d-4c57-a1da-8659b4ea597c",
+            "containerId": "",
+            "name": "/ POST google",
+            "url": "http://127.0.0.1:5000",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-04-11T22:30:09.854Z",
+            "modified": "2023-04-11T22:30:21.517Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"link\": \"https://www.google.com\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "86b91a4e-0e9d-4720-9b0b-ba56310718dc",
+            "colId": "1e93a912-0b1d-4c57-a1da-8659b4ea597c",
+            "containerId": "",
+            "name": "/ POST bing",
+            "url": "http://127.0.0.1:5000",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-04-11T22:30:25.516Z",
+            "modified": "2023-04-11T22:31:19.036Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"link\": \"https://www.bing.com\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c956f739-db03-4404-bc18-b3bf35375f14",
+            "colId": "1e93a912-0b1d-4c57-a1da-8659b4ea597c",
+            "containerId": "",
+            "name": "/ POST apple",
+            "url": "http://127.0.0.1:5000",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-04-11T22:30:53.042Z",
+            "modified": "2023-04-11T22:31:22.585Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"link\": \"https://www.apple.com\"}",
+                "form": []
+            },
+            "tests": []
+        }
+    ],
+    "settings": {}
+}

@@ -1,0 +1,88 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Demo - / POST",
+    "dateExported": "2023-04-13T07:29:55.620Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "20c679e6-b5a0-46a9-b970-7709a044d4f5",
+            "colId": "f5f2f4f1-34ec-4280-a1b8-19b4a10fa7c8",
+            "containerId": "",
+            "name": "/ POST (invalild url)",
+            "url": "http://127.0.0.1:5000",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-04-11T22:12:51.635Z",
+            "modified": "2023-04-11T22:15:48.790Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"link\": \"htp://www.google.com\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4e084ef7-28c5-4f86-b991-988d2014301d",
+            "colId": "f5f2f4f1-34ec-4280-a1b8-19b4a10fa7c8",
+            "containerId": "",
+            "name": "/ POST (no url)",
+            "url": "http://127.0.0.1:5000",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-04-11T22:14:43.716Z",
+            "modified": "2023-04-11T22:19:58.564Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "305c4dab-731a-4899-a6b8-c4930951581a",
+            "colId": "f5f2f4f1-34ec-4280-a1b8-19b4a10fa7c8",
+            "containerId": "",
+            "name": "/ POST (valid url)",
+            "url": "http://127.0.0.1:5000",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-04-11T22:22:33.831Z",
+            "modified": "2023-04-11T22:23:11.754Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"link\": \"https://www.google.com\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f13bf22b-4454-42c7-a2a0-a840fa247fd0",
+            "colId": "f5f2f4f1-34ec-4280-a1b8-19b4a10fa7c8",
+            "containerId": "",
+            "name": "/ POST (duplicate url)",
+            "url": "http://127.0.0.1:5000",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-04-11T22:23:26.085Z",
+            "modified": "2023-04-11T22:23:26.085Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"link\": \"https://www.google.com\"}",
+                "form": []
+            },
+            "tests": []
+        }
+    ],
+    "settings": {
+        "runOptions": {
+            "delay": 5,
+            "iterations": 1,
+            "stopOnFail": true,
+            "dataFilePath": ""
+        }
+    }
+}

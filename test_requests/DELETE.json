@@ -1,0 +1,23 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Demo - / DELETE",
+    "dateExported": "2023-04-13T07:30:41.052Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "70a5803e-f72d-4a47-a91e-0f76746216c9",
+            "colId": "707c024e-9648-438a-8ec9-7a29bb59c29d",
+            "containerId": "",
+            "name": "/ DELETE",
+            "url": "http://127.0.0.1:5000",
+            "method": "DELETE",
+            "sortNum": 10000,
+            "created": "2023-04-11T22:27:10.828Z",
+            "modified": "2023-04-11T22:27:17.707Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
