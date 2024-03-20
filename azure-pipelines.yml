@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool:RINKU
+pool: Default
   
 strategy:
   matrix:
